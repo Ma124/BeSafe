@@ -1,0 +1,17 @@
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/sass/utilities/functions";
+// Initialize variables
+$primary: #1E88E5;
+
+@import "../node_modules/bulma/sass/utilities/derived-variables";
+// Initialize derived variables
+
+@import "../node_modules/bulma/bulma";
+
+#navbar {
+  //box-shadow: 0 0 30px grey;
+}
+
+.hero.is-primary.is-bold {
+  background-image: none; // Remove standard hero gradient
+}
