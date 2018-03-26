@@ -5,5 +5,6 @@ window.hash = (v) ->
   document.getElementById("hex").value = out.toHex()
   document.getElementById("b64").value = forge.util.encode64(out.data)
 
+
 window.regen_hash = ->
   hash(document.getElementById("input").value)
