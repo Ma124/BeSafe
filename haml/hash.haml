@@ -12,23 +12,25 @@
           .container
             %h1.title BeSafe!
             %h2.subtitle Hashing
-      .field
-        %label.label Algorithm
-        .control
-          .select
-            %select#algorithm{:oninput => "regen_hash()"}
-              %option SHA-1
-              %option{:selected => "selected"} SHA-256
-              %option SHA-384
-              %option SHA-512
-              %option SHA-512/224
-              %option SHA-512/256
-              %option MD5
-      .field
-        %label.label Input
-        .control
-          %textarea.textarea#input{:placeholder => "String to be hashed", :oninput => "hash(this.value)"}
-      .field
-        %label.label Hex
-        .control
-          %input.input#hex{:type => "text", :readonly => "readonly", :onclick => "this.select();"}
+      %section.section
+        .container
+          .field
+            %label.label Algorithm
+            .control
+              .select
+                %select#algorithm{:oninput => "regen_hash()"}
+                  %option SHA-1
+                  %option{:selected => "selected"} SHA-256
+                  %option SHA-384
+                  %option SHA-512
+                  %option SHA-512/224
+                  %option SHA-512/256
+                  %option MD5
+          .field
+            %label.label Input
+            .control
+              %textarea.textarea#input{:placeholder => "String to be hashed", :oninput => "hash(this.value)"}
+          .field
+            %label.label Hex
+            .control
+              %input.input#hex{:type => "text", :readonly => "readonly", :onclick => "this.select();"}

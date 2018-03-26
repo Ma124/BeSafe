@@ -4,9 +4,11 @@
     = File.read "_head.html"
   %body
     = File.read "_navbar.html"
-
-    %section.hero.is-primary.is-bold
-      .hero-body
+    %main
+      %section.section
         .container
-          %h1.title BeSafe!
-          %h2.subtitle For all your security needs!
+          %section.hero.is-primary.is-bold
+            .hero-body
+              .container
+                %h1.title BeSafe!
+                %h2.subtitle For all your security needs!
