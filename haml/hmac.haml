@@ -1,0 +1,30 @@
+%html
+  %head
+    %title BeSafe!
+    = File.read "_head.html"
+  %body
+    = File.read "_navbar.html"
+    %main
+      %section.hero.is-primary.is-bold
+        .hero-body
+          .container
+            %h1.title BeSafe!
+            %h2.subtitle For all your security needs!
+      %section.section
+        .container
+          .field
+            %label.label Algorithm
+            .control
+              .select
+                %select#algorithm{:oninput => "regen_hash()"}
+                  %option SHA-1
+                  %option{:selected => "selected"} SHA-256
+                  %option SHA-384
+                  %option SHA-512
+                  %option SHA-512/224
+                  %option SHA-512/256
+                  %option MD5
+          .field
+            %label.label Password
+            .control
+              %input.input#pw{:type => "password"}
