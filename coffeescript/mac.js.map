@@ -6,8 +6,8 @@
     "mac.coffee"
   ],
   "names": [],
-  "mappings": ";AAAA;EAAA,MAAM,CAAC,IAAP,GAAc,QAAA,CAAC,CAAD,CAAA;AACZ,QAAA,EAAA,EAAA;IAAA,EAAA,GAAK,KAAK,CAAC,IAAI,CAAC,MAAX,CAAA;IACL,EAAE,CAAC,KAAH,CAAS,QAAQ,CAAC,cAAT,CAAwB,WAAxB,CAAT,EAA+C,GAA/C;IACA,EAAE,CAAC,MAAH,CAAU,CAAV;IACA,GAAA,GAAM,EAAE,CAAC,MAAH,CAAA;IACN,QAAQ,CAAC,cAAT,CAAwB,KAAxB,CAA8B,CAAC,KAA/B,GAAuC,GAAG,CAAC,KAAJ,CAAA;WACvC,QAAQ,CAAC,cAAT,CAAwB,KAAxB,CAA8B,CAAC,KAA/B,GAAuC,KAAK,CAAC,IAAI,CAAC,QAAX,CAAoB,GAAG,CAAC,IAAxB;EAN3B;;EAQd,MAAM,CAAC,UAAP,GAAoB,QAAA,CAAA,CAAA;WAClB,IAAA,CAAK,QAAQ,CAAC,cAAT,CAAwB,OAAxB,CAAgC,CAAC,KAAtC;EADkB;AARpB",
+  "mappings": ";AAAA;EAAA,MAAM,CAAC,IAAP,GAAc,QAAA,CAAC,CAAD,CAAA;AACZ,QAAA,EAAA,EAAA;IAAA,EAAA,GAAK,KAAK,CAAC,IAAI,CAAC,MAAX,CAAA;IACL,EAAE,CAAC,KAAH,CAAS,QAAQ,CAAC,cAAT,CAAwB,WAAxB,CAAoC,CAAC,KAA9C,EAAqD,GAArD;IACA,EAAE,CAAC,MAAH,CAAU,CAAV;IACA,GAAA,GAAM,EAAE,CAAC,MAAH,CAAA;IACN,QAAQ,CAAC,cAAT,CAAwB,KAAxB,CAA8B,CAAC,KAA/B,GAAuC,GAAG,CAAC,KAAJ,CAAA;WACvC,QAAQ,CAAC,cAAT,CAAwB,KAAxB,CAA8B,CAAC,KAA/B,GAAuC,KAAK,CAAC,IAAI,CAAC,QAAX,CAAoB,GAAG,CAAC,IAAxB;EAN3B;;EAQd,MAAM,CAAC,UAAP,GAAoB,QAAA,CAAA,CAAA;WAClB,IAAA,CAAK,QAAQ,CAAC,cAAT,CAAwB,OAAxB,CAAgC,CAAC,KAAtC;EADkB;AARpB",
   "sourcesContent": [
-    "window.hash = (v) ->\r\n  md = forge.hmac.create()\r\n  md.start(document.getElementById('algorithm'), 'a')\r\n  md.update(v)\r\n  out = md.digest()\r\n  document.getElementById(\"hex\").value = out.toHex()\r\n  document.getElementById(\"b64\").value = forge.util.encode64(out.data)\r\n\r\nwindow.regen_hash = ->\r\n  hash(document.getElementById(\"input\").value)\r\n"
+    "window.hash = (v) ->\r\n  md = forge.hmac.create()\r\n  md.start(document.getElementById('algorithm').value, 'a')\r\n  md.update(v)\r\n  out = md.digest()\r\n  document.getElementById(\"hex\").value = out.toHex()\r\n  document.getElementById(\"b64\").value = forge.util.encode64(out.data)\r\n\r\nwindow.regen_hash = ->\r\n  hash(document.getElementById(\"input\").value)\r\n"
   ]
 }
