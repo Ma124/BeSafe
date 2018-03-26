@@ -7,7 +7,8 @@
     md.update(v);
     out = md.digest();
     document.getElementById("hex").value = out.toHex();
-    return document.getElementById("b64").value = out.toHex();
+    console.log(out);
+    return document.getElementById("b64").value = out;
   };
 
   window.regen_hash = function() {

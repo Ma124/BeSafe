@@ -4,7 +4,8 @@ window.hash = (v) ->
   md.update(v)
   out = md.digest()
   document.getElementById("hex").value = out.toHex()
-  document.getElementById("b64").value = out.toHex()
+  console.log(out)
+  document.getElementById("b64").value = out
 
 window.regen_hash = ->
   hash(document.getElementById("input").value)
