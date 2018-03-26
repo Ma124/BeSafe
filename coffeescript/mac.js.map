@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "mac.js",
+  "sourceRoot": "",
+  "sources": [
+    "mac.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;;AAAA",
+  "sourcesContent": [
+    ""
+  ]
+}

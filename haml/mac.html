@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>BeSafe!</title>
+<title>BeSafe! - Hashing</title>
 <meta charset='UTF-8'>
 <meta content='text/html; charset=UTF-8' http='content-type'>
 <meta content='BeSafe!' name='application-name'>
@@ -15,6 +15,9 @@
 <meta content='0; url=ie.html' http='refersh'>
 <![endif]-->
 
+<script src='/BeSafe/coffeescript/hash.js'></script>
+<!-- /%script{:src => "/BeSafe/node_modules/node-forge/dist/forge.all.min.js"} -->
+<script src='https://cdn.jsdelivr.net/npm/node-forge@0.7.0/dist/forge.min.js'></script>
 </head>
 <body>
 <nav class='navbar'></nav>
@@ -47,7 +50,7 @@
 <div class='hero-body'>
 <div class='container'>
 <h1 class='title'>BeSafe!</h1>
-<h2 class='subtitle'>For all your security needs!</h2>
+<h2 class='subtitle'>MAC</h2>
 </div>
 </div>
 </section>
@@ -57,7 +60,7 @@
 <label class='label'>Algorithm</label>
 <div class='control'>
 <div class='select'>
-<select id='algorithm'>
+<select id='algorithm' oninput='regen_hash()'>
 <option>SHA-1</option>
 <option selected='selected'>SHA-256</option>
 <option>SHA-384</option>
@@ -70,15 +73,21 @@
 </div>
 </div>
 <div class='field'>
-<label class='label'>Password</label>
+<label class='label'>Input</label>
 <div class='control'>
-<input class='input' id='pw' placeholder='Password' type='password'>
+<textarea class='textarea' id='input' oninput='hash(this.value)' placeholder='String to be hashed'></textarea>
 </div>
 </div>
 <div class='field'>
-<label class='label'>Input</label>
+<label class='label'>Hex</label>
 <div class='control'>
-<textarea class='textarea' id='input' placeholder='String to be hashed'></textarea>
+<input class='input' id='hex' onclick='this.select();' readonly='readonly' type='text'>
+</div>
+</div>
+<div class='field'>
+<label class='label'>Base64</label>
+<div class='control'>
+<input class='input' id='b64' onclick='this.select();' readonly='readonly' type='text'>
 </div>
 </div>
 </div>
