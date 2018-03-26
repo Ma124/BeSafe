@@ -1,3 +1,5 @@
+regen_hash()
+
 window.hash = (v) ->
   md = eval("forge.md." + document.getElementById("algorithm").value.toLowerCase().replace("-", "").replace("/", ".sha") + ".create()")
   md.update(v)
