@@ -6,7 +6,6 @@
     md.update(v);
     out = md.digest();
     document.getElementById("hex").value = out.toHex();
-    console.log(":" + forge.util.encode64(out.data));
     return document.getElementById("b64").value = forge.util.encode64(out.data);
   };
 

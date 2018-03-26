@@ -3,7 +3,6 @@ window.hash = (v) ->
   md.update(v)
   out = md.digest()
   document.getElementById("hex").value = out.toHex()
-  console.log(":" + forge.util.encode64(out.data))
   document.getElementById("b64").value = forge.util.encode64(out.data)
 
 window.regen_hash = ->
