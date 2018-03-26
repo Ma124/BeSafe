@@ -3,12 +3,11 @@
   window.hash = function(v) {
     var md, out;
     md = eval("forge.md." + document.getElementById("algorithm").value.toLowerCase().replace("-", "").replace("/", ".sha") + ".create()");
-    //md = forge.md.sha256.create()
     md.update(v);
     out = md.digest();
     document.getElementById("hex").value = out.toHex();
-    console.log(out);
-    return document.getElementById("b64").value = out;
+    console.log(":" + forge.util.encode64(out.data));
+    return document.getElementById("b64").value = forge.util.encode64(out.data);
   };
 
   window.regen_hash = function() {
