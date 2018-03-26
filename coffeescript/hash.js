@@ -6,7 +6,8 @@
     //md = forge.md.sha256.create()
     md.update(v);
     out = md.digest();
-    return document.getElementById("hex").value = out.toHex();
+    document.getElementById("hex").value = out.toHex();
+    return document.getElementById("b64").value = out.toHex();
   };
 
   window.regen_hash = function() {
