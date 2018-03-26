@@ -7,7 +7,8 @@
     md.update(v);
     out = md.digest();
     document.getElementById("hex").value = out.toHex();
-    console.log(out);
+    console.log(forge.util.encode64(out));
+    console.log(forge.util.decode64(out));
     return document.getElementById("b64").value = out;
   };
 
