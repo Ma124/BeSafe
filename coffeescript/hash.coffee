@@ -7,5 +7,3 @@ window.hash = (v) ->
 
 window.regen_hash = ->
   hash(document.getElementById("input").value)
-
-regen_hash()
