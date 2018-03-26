@@ -16,7 +16,7 @@
             %label.label Algorithm
             .control
               .select
-                %select#algorithm{:oninput => "regen_hash()"}
+                %select#algorithm
                   %option SHA-1
                   %option{:selected => "selected"} SHA-256
                   %option SHA-384
@@ -28,3 +28,7 @@
             %label.label Password
             .control
               %input.input#pw{:type => "password"}
+          .field
+            %label.label Input
+            .control
+              %textarea.textarea#input{:placeholder => "String to be hashed"}

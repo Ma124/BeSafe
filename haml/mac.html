@@ -56,7 +56,7 @@
 <label class='label'>Algorithm</label>
 <div class='control'>
 <div class='select'>
-<select id='algorithm' oninput='regen_hash()'>
+<select id='algorithm'>
 <option>SHA-1</option>
 <option selected='selected'>SHA-256</option>
 <option>SHA-384</option>
@@ -72,6 +72,12 @@
 <label class='label'>Password</label>
 <div class='control'>
 <input class='input' id='pw' type='password'>
+</div>
+</div>
+<div class='field'>
+<label class='label'>Input</label>
+<div class='control'>
+<textarea class='textarea' id='input' placeholder='String to be hashed'></textarea>
 </div>
 </div>
 </div>
