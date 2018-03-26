@@ -1,6 +1,6 @@
 window.hash = (v) ->
   md = forge.hmac.create()
-  md.start(document.getElementById('algorithm').value, 'a')
+  md.start('sha1', 'a')
   md.update(v)
   out = md.digest()
   document.getElementById("hex").value = out.toHex()
