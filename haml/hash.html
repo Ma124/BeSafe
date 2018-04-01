@@ -31,7 +31,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <![endif]-->
 
 <script src='/BeSafe/coffeescript/hash.js'></script>
-<!-- /%script{:src => "/BeSafe/node_modules/node-forge/dist/forge.all.min.js"} -->
 <script src='https://cdn.jsdelivr.net/npm/node-forge@0.7.0/dist/forge.min.js'></script>
 </head>
 <body>
@@ -76,7 +75,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <div class='select'>
 <select id='algorithm' oninput='regen_hash()'>
 <option>SHA-1</option>
-<option selected='selected'>SHA-256</option>
+<option selected>SHA-256</option>
 <option>SHA-384</option>
 <option>SHA-512</option>
 <option>SHA-512/224</option>
@@ -95,13 +94,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <div class='field'>
 <label class='label'>Hex</label>
 <div class='control'>
-<input class='input' id='hex' onclick='this.select();' readonly='readonly' type='text'>
+<input class='input' id='hex' onclick='this.select();' readonly type='text'>
 </div>
 </div>
 <div class='field'>
 <label class='label'>Base64</label>
 <div class='control'>
-<input class='input' id='b64' onclick='this.select();' readonly='readonly' type='text'>
+<input class='input' id='b64' onclick='this.select();' readonly type='text'>
 </div>
 </div>
 </div>

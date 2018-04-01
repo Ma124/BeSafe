@@ -21,7 +21,7 @@
     %title BeSafe! - Hashing
     = File.read "_head.html"
     %script{:src => "/BeSafe/coffeescript/hash.js"}
-    //%script{:src => "/BeSafe/node_modules/node-forge/dist/forge.all.min.js"}
+    -# %script{:src => "/BeSafe/node_modules/node-forge/dist/forge.all.min.js"}
     %script{:src => "https://cdn.jsdelivr.net/npm/node-forge@0.7.0/dist/forge.min.js"}
   %body
     = File.read "_navbar.html"
@@ -39,7 +39,7 @@
               .select
                 %select#algorithm{:oninput => "regen_hash()"}
                   %option SHA-1
-                  %option{:selected => "selected"} SHA-256
+                  %option{:selected => true} SHA-256
                   %option SHA-384
                   %option SHA-512
                   %option SHA-512/224
@@ -52,8 +52,8 @@
           .field
             %label.label Hex
             .control
-              %input.input#hex{:type => "text", :readonly => "readonly", :onclick => "this.select();"}
+              %input.input#hex{:type => "text", :readonly => true, :onclick => "this.select();"}
           .field
             %label.label Base64
             .control
-              %input.input#b64{:type => "text", :readonly => "readonly", :onclick => "this.select();"}
+              %input.input#b64{:type => "text", :readonly => true, :onclick => "this.select();"}
