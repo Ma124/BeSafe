@@ -9,10 +9,7 @@ def call(l):
     if args.dry:
         print(l)
     else:
-        print()
-        print(l)
         call_(l)
-        pass
 
 
 def comp_scss(inp, out):

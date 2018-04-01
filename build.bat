@@ -1,1 +1,1 @@
-py build.py --all --src-haml=haml --src-coffee=coffeescript --src-scss=scss --out-all=_site
+py build.py --all --src-haml=haml --src-coffee=coffeescript --src-scss=scss --out-all=docs
