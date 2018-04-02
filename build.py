@@ -37,12 +37,12 @@ def _(d, lmb, ext, out, ext_prev):
     for root, subdirs, files in os.walk(d):
         for f in files:
             s = path.abspath(d + '/' + f)
-            if s.endswith('.' + ext_prev):
+            if s.endswith(ext_prev):
                 lmb(s, out + '/' + get_name(s) + ext)
 
 
 par = argparse.ArgumentParser(description='Building sites.')
-par.add_argument('--file', '-f', help='single file', action='store')
+par.add_argument('--file', '-f', help='single file', action='store', default=None)
 par.add_argument('-C', '--cfg', '--config', help='the config file')
 par.add_argument('-d', '--dry', action='store_true', help='dry run (only prints commands)')
 
@@ -90,14 +90,25 @@ if path.exists(str(args.cfg)):
     cfg._interpolation = configparser.ExtendedInterpolation()
     cfg.read(args.cfg)
 
+if args.file is not None:
+    for f in str(args.file).split(';'):
+        if f == '':
+            continue
+        if str(args.file).endswith('.haml'):
+            comp_haml(args.file, args.out_haml + '/' + get_name(args.file) + '.html')
+        if str(args.file).endswith('.scss'):
+            comp_scss(args.file, args.out_scss + '/' + get_name(args.file) + '.css')
+        if str(args.file).endswith('.coffee'):
+            comp_coffee(args.file, args.out_coffee + '/' + get_name(args.file) + '.js')
+
 if args.scss:
     for d in str(args.src_scss).split(';'):
-        _(d, comp_scss, '.css', args.out_scss, 'scss')
+        _(d, comp_scss, '.css', args.out_scss, '.scss')
 
 if args.coffee:
     for d in str(args.src_coffee).split(';'):
-        _(d, comp_coffee, '.js', args.out_coffee, 'coffee')
+        _(d, comp_coffee, '.js', args.out_coffee, '.coffee')
 
 if args.haml:
     for d in str(args.src_haml).split(';'):
-        _(d, comp_haml, '.html', args.out_haml, 'haml')
+        _(d, comp_haml, '.html', args.out_haml, '.haml')

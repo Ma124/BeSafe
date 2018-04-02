@@ -1,1 +1,2 @@
-py build.py --all --src-haml=haml --src-coffee=coffeescript --src-scss=scss --out-all=docs
+@echo off
+py build.py --src-haml=haml --src-coffee=coffeescript --src-scss=scss --out-all=docs %*
