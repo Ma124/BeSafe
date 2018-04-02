@@ -19,13 +19,12 @@
 
   %head
     %title BeSafe! - Hashing
-    %include _head.html
+    %include _head.haml
     %script{:src => "hash.js"}
-    %include _head.html
     -# %script{:src => "/BeSafe/node_modules/node-forge/dist/forge.all.min.js"}
     %script{:src => "https://cdn.jsdelivr.net/npm/node-forge@0.7.0/dist/forge.min.js"}
   %body
-    %include _navbar.html
+    %include _navbar.haml
     %main
       %section.hero.is-primary.is-bold
         .hero-body

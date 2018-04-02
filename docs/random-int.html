@@ -15,7 +15,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <head>
-<title>BeSafe!</title>
+<title>BeSafe! - Random</title>
 <meta charset='UTF-8'>
 <meta content='text/html; charset=UTF-8' http='content-type'>
 <meta content='BeSafe!' name='application-name'>
@@ -67,12 +67,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 <div class='hero-body'>
 <div class='container'>
 <h1 class='title'>BeSafe!</h1>
-<h2 class='subtitle'>For all your security needs!</h2>
+<h2 class='subtitle'>Random - Integer</h2>
 </div>
 </div>
 </section>
 <section class='section'>
-<div class='container'></div>
+<div class='container'>
+<div class='field'>
+<label class='label'>Source</label>
+<div class='control'>
+<div class='select'>
+<select id='source'>
+<option selected>Random.org (True)</option>
+<option>XorShift (Pseudo)</option>
+<option>Fortuna (Secure)</option>
+</select>
+</div>
+</div>
+</div>
+<div class='field'>
+<label class='label' disabled>Seed</label>
+<div class='control'></div>
+</div>
+</div>
 </section>
 </main>
 </body>

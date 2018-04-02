@@ -18,7 +18,7 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
   %head
     %title BeSafe! - Random
-    %include _head.html
+    %include _head.haml
   %body
     %include _navbar.haml
     %main
@@ -26,10 +26,10 @@
         .hero-body
           .container
             %h1.title BeSafe!
-            %h2.subtitle Randomness
+            %h2.subtitle Random
       %section.section
         .container
           %h3.title.is-3 Numbers
           %ul
             %li
-              %a Integer
+              %a{:href => "random-int.html"} Integer

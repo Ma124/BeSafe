@@ -17,7 +17,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
   %head
-    %title BeSafe!
+    %title BeSafe! - Random
     %include _head.haml
   %body
     %include _navbar.haml
@@ -26,6 +26,18 @@
         .hero-body
           .container
             %h1.title BeSafe!
-            %h2.subtitle For all your security needs!
+            %h2.subtitle Random - Integer
       %section.section
         .container
+          .field
+            %label.label Source
+            .control
+              .select
+                %select#source
+                  %option{:selected => true} Random.org (True)
+                  %option XorShift (Pseudo)
+                  %option Fortuna (Secure)
+          .field
+            %label.label{:disabled => true} Seed
+            .control
+
