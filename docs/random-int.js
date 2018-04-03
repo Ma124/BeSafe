@@ -17,9 +17,25 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
   */
-  window.generate = function() {
-    if (document.getElementById('rng-source') === "Random.org (True)") {
-      return document.getElementById('');
+  var locked;
+
+  locked = false;
+
+  window.gen = function() {
+    if (locked) {
+      return alert("Already generating...");
+    } else {
+      return $.post("https://api.random.org/json-rpc/1/invoke", {
+        jsonrpc: "2.0",
+        method: "generateIntegers",
+        params: {
+          apiKey: "c2eb6071-6c2a-4d0a-8e70-6fa59bbb0980",
+          n: document.getElementById('n').value,
+          min: document.getElementById('min'),
+          max: document.getElementById('max')
+        },
+        id: 0
+      });
     }
   };
 

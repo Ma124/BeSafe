@@ -19,6 +19,7 @@
   %head
     %title BeSafe! - Random
     %include _head.haml
+    %script{:src => "random-int.js"}
   %body
     %include _navbar.haml
     %main
@@ -33,26 +34,23 @@
             %label.label Source
             .control
               .select
-                %select#source
+                %select#rng-src
                   %option{:selected => true} Random.org (True)
-                  %option XorShift (Pseudo)
-                  %option Fortuna (Secure)
+                  %option{:disabled => true} XorShift (Pseudo)
+                  %option{:disabled => true} Fortuna (Secure)
+          .field
+            %label.label Number of integers
+            .control
+              %input.input#n{:type => "number", :min => 0, :max => 10000, :value => 100}
+          %label.label Minimum and Maximum
+          .field.has-addons
+            .control
+              %input.input#min{:type => "number", :min => -1000000000, :max => 1000000000, :value => 0}
+            .control
+              %input.input#max{:type => "number", :min => -1000000000, :max => 1000000000, :value => 100}
           .container
-            %a.button.is-primary Generate
+            %a.button.is-primary{:onclick => "gen()"} Generate
             %label.label{:style => "padding-top: 20px;"} Random integers
-            %table.invisible-table
-              %tbody#out
-                /
-                  %tr
-                    %td 1234
-                    %td 1234
-                    %td 1234
-                    %td 1234
-                    %td 1234
-                  %tr
-                    %td 1234
-                    %td 1234
-                    %td 1234
-                    %td 1234
-                    %td 1234
+            #ints
+
 

@@ -16,3 +16,19 @@
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ###
 
+locked = false
+
+window.gen = ->
+  if locked
+    alert("Already generating...")
+  else
+    $.post("https://api.random.org/json-rpc/1/invoke", {
+      jsonrpc: "2.0"
+      method: "generateIntegers"
+      params:
+        apiKey: "c2eb6071-6c2a-4d0a-8e70-6fa59bbb0980"
+        n: document.getElementById('n').value
+        min: document.getElementById('min')
+        max: document.getElementById('max')
+      id: 0
+    })
