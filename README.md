@@ -7,13 +7,14 @@ BeSafe! provides client-side cryptography services
 ### ./build
 `./build` and `build.bat` are a template for calling the underlying `build.py`.
 The arguments:
+
 Name | Help | Value 
 ------|------|-------
 \-\-src-haml | source directory for all [.haml](http://haml.info/) files | haml 
 \-\-src-scss | source directory for all [.scss](http://sass-lang.com/) files | scss 
 \-\-src-coffee | source directory for all [.coffee](http://coffeescript.org/) files | coffeescript 
 \-\-out-all | output directory for all files | docs
-`%*` or `$@` | propagates all arguments to `build.py`
+`%*` or `$@` | propagates all arguments to `build.py` | |
 
 Command | Help
 --------|-------
