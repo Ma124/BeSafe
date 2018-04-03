@@ -94,12 +94,14 @@ if args.file is not None:
     for f in str(args.file).split(';'):
         if f == '':
             continue
-        if str(args.file).endswith('.haml'):
-            comp_haml(args.file, args.out_haml + '/' + get_name(args.file) + '.html')
-        if str(args.file).endswith('.scss'):
-            comp_scss(args.file, args.out_scss + '/' + get_name(args.file) + '.css')
-        if str(args.file).endswith('.coffee'):
-            comp_coffee(args.file, args.out_coffee + '/' + get_name(args.file) + '.js')
+        if f.endswith('.haml'):
+            if get_name(f).startswith('_'):
+                args.haml = True
+            comp_haml(f, args.out_haml + '/' + get_name(f) + '.html')
+        if str(f).endswith('.scss'):
+            comp_scss(f, args.out_scss + '/' + get_name(f) + '.css')
+        if str(f).endswith('.coffee'):
+            comp_coffee(f, args.out_coffee + '/' + get_name(f) + '.js')
 
 if args.scss:
     for d in str(args.src_scss).split(';'):

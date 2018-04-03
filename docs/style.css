@@ -6448,4 +6448,11 @@ label.panel-block {
 .hero.is-primary.is-bold {
   background-image: none; }
 
+table.invisible-table {
+  border: none; }
+  table.invisible-table th, table.invisible-table td {
+    border: none;
+    padding-right: 10px;
+    padding-bottom: 5px; }
+
 /*# sourceMappingURL=style.css.map */

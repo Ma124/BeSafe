@@ -37,7 +37,22 @@
                   %option{:selected => true} Random.org (True)
                   %option XorShift (Pseudo)
                   %option Fortuna (Secure)
-          .field
-            %label.label{:disabled => true} Seed
-            .control
+          .container
+            %a.button.is-primary Generate
+            %label.label{:style => "padding-top: 20px;"} Random integers
+            %table.invisible-table
+              %tbody#out
+                /
+                  %tr
+                    %td 1234
+                    %td 1234
+                    %td 1234
+                    %td 1234
+                    %td 1234
+                  %tr
+                    %td 1234
+                    %td 1234
+                    %td 1234
+                    %td 1234
+                    %td 1234
 

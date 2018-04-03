@@ -33,3 +33,13 @@ $primary: #1E88E5;
 .hero.is-primary.is-bold {
   background-image: none; // Remove standard hero gradient
 }
+
+table.invisible-table {
+  th, td {
+    border: none;
+    padding-right: 10px;
+    padding-bottom: 5px;
+  }
+
+  border: none;
+}
