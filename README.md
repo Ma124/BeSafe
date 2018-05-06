@@ -1,3 +1,4 @@
+[![JS.ORG](https://img.shields.io/badge/js.org-dns-ffb400.svg?style=flat-square)](http://js.org)
 # BeSafe
 BeSafe! provides client-side cryptography services
 
