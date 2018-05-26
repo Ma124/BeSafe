@@ -1,0 +1,62 @@
+!!! html
+%html
+  /
+    BeSafe! - For all your security needs
+    Copyright (C) 2018  Ma124
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+  %head
+    %title BeSafe! - Hashing
+    %include _head.haml
+    %script{:src => "hash.js"}
+    %script{:src => "https://cdn.jsdelivr.net/npm/node-forge@0.7.0/dist/forge.min.js"}
+  %body
+    %include _navbar.haml
+    %main
+      %section.hero.is-primary.is-bold
+        .hero-body
+          .container
+            %h1.title BeSafe!
+            %h2.subtitle MAC
+      %section.section
+        .container
+          .field
+            %label.label Algorithm
+            .control
+              .select
+                %select#algorithm{:oninput => "mac()"}
+                  %option SHA-1
+                  %option{:selected => true} SHA-256
+                  %option SHA-384
+                  %option SHA-512
+                  %option SHA-512/224
+                  %option SHA-512/256
+                  %option MD5
+          .field
+            %label.label Password
+            .control
+              %textarea.textarea#pw{:placeholder => "Password", :oninput => "mac()"}
+          .field
+            %label.label Input
+            .control
+              %textarea.textarea#input{:placeholder => "String to be hashed", :oninput => "mac()"}
+          .field
+            %label.label Hex
+            .control
+              %input.input#hex{:type => "text", :readonly => true, :onclick => "this.select();"}
+          .field
+            %label.label Base64
+            .control
+              %input.input#b64{:type => "text", :readonly => true, :onclick => "this.select();"}

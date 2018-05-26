@@ -22,6 +22,7 @@ window.hash = (v) ->
   out = md.digest()
   document.getElementById("hex").value = out.toHex()
   document.getElementById("b64").value = forge.util.encode64(out.data)
+  #document.getElementById("b91").value = base91.encode(out.data)
 
 
 window.regen_hash = ->

@@ -21,7 +21,7 @@
     %title BeSafe! - Hashing
     %include _head.haml
     %script{:src => "hash.js"}
-    -# %script{:src => "/BeSafe/node_modules/node-forge/dist/forge.all.min.js"}
+    %script{:src => "../node_modules/base91/lib/base91.js"}
     %script{:src => "https://cdn.jsdelivr.net/npm/node-forge@0.7.0/dist/forge.min.js"}
   %body
     %include _navbar.haml
@@ -57,3 +57,7 @@
             %label.label Base64
             .control
               %input.input#b64{:type => "text", :readonly => true, :onclick => "this.select();"}
+          -#.field
+              %label.label Base91
+              .control
+                %input.input#b91{:type => "text", :readonly => true, :onclick => "this.select();"}

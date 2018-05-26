@@ -1,0 +1,25 @@
+{
+  "name": "besafe",
+  "version": "1.0.0",
+  "description": "BeSafe! provides client-side cryptography services",
+  "dependencies": {
+    "base91": "0.0.5",
+    "bulma": "^0.6.2",
+    "jquery": "^3.3.1",
+    "node-forge": "^0.7.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ma124/BeSafe.git"
+  },
+  "author": "Ma_124",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Ma124/BeSafe/issues"
+  },
+  "homepage": "https://besafe.js.org"
+}
