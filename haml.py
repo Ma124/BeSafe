@@ -43,7 +43,7 @@ def comp(inp, out, cfgf):
         print("inp doesn't exist!")
         return
 
-    call(['D:/Programs/Ruby24-x64/bin/haml.bat', inp, out])
+    call(['haml', inp, out])
 
     f = open(out, 'r')
     html = f.read()
